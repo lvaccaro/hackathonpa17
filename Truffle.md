@@ -2,7 +2,7 @@
 
 * Install truffle framework with : 
 ```
-sudo nom install -g truffle .
+sudo npm install -g truffle .
 ```
 
 * Repo creation: 
