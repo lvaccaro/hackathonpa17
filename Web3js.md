@@ -11,7 +11,7 @@ I formalize a flexible and ready to work procedure.
 REMEMBER: use function to compile solidity contract on the ethereum server node, could be an error, because your ethereum node could not have solc (solidity) installed
 
 
-##### Requirements
+#### Requirements
 ```
 var Web3 = require('./node_modules/web3/lib/web3');
 var fs = require('fs');
@@ -72,11 +72,14 @@ try {
     return;
 }
 ```
-With *solc* library you can compile the contract on client-side. This is important because you can also decide to compile the contract on server-side as the follow:
+* The compilation procedure returns an array of contracts defined in you source. If your source defined only 1 contract, you can ommit the *contracts[":SimpleStorage"]* and use directly the internal property of the contract (compiled.interface or compiled.bytecode)
+* ABI is the Application binary interface for your smart-contract. This object is returned as JSON string, so you need to parsify.
+* CODE is the bytecode of your contract to execute. By default the library cut the '0x', so you should manually add it.
+* With *solc* library you can compile the contract on client-side. This is important because you can also decide to compile the contract on server-side as the follow:
 ```
 var compiled = web3.eth.compile.solidity(source);
 ```
-In this case, the ethereum server node makes all the job, so you should have installed solc software on the server. In Azure environment, solc is not installed by default, so you retrieve the follow error: "command not found." . Once you have installed solc package remember to add the binary to the default path. Note solc binary has name solcjs, so you should change the current binary name to solc.
+In this case, the ethereum server node makes all the job, so you should have installed solc software on the server. In Azure environment, solc is not installed by default, so you retrieve the follow error: "command not found." . Once you have installed solc package remember to add the binary to the default path. Note solc binary has name solcjs, so you should change the current binary name to solc.   
 
 #### Unlock ethereum account
 ```
@@ -91,7 +94,7 @@ web3.personal.unlockAccount (web3.eth.defaultAccount, "********" , 15000, (error
 ```
 By default, your accounts in Ethereum are "locked," which means that you can't send transactions from them. You need to unlock an account in order to send transactions from it through Geth directly or via RPC. In order to unlock an account, you'll need to provide the password, which is used to decrypt the private key associated with your account, hence allowing you to sign transactions.
 
-#### Run a contract action
+#### Run you contract
 ```
 try{
       var contractObject = web3.eth.contract(abi);
@@ -117,3 +120,27 @@ try{
         return;
     }
 ```
+* contractObject : is the class of your smart-contract.
+* contractInstance : is the object generated from contractObject. To instantiate a smart-contract, you should make a ethereum transaction specified the standard parameters to build your contract: the sender address (in this case the coinbase address), the data (the bytecode to put inside the script field ) and the amount.
+* the amount > the minimum fee of the system and the amount > the fee calculated for your smart-contract. Bigger is you smart-contract, bigger are the fees you have to spend. In my test the minimum amount of gase accepted are 21000. The gas value in the example is the standard used gas value of the Azure Etherum dev.
+* the callback is called twice : 1st when the transaction is broadcasted, 2nd when the block, containing the transaction, is mined. Only at the 2nd callback, you can call successfully the observer function in the contract in order to read his intenal state.
+
+#### Read internal state
+```
+function read(contractInstance){
+  console.log("READ");
+  try{
+    contractInstance.read(function(e,data){
+      if(!e){
+         console.log('Data: ', data);
+      } else {
+         console.log('Error: ', e);
+      }
+    });
+  }catch(e) {
+    console.log('Error: ', e.stack);
+    return;
+  }
+}
+```
+The contractInstance object created before is just put inside a transaction and mined. So I can call observer and modifier functions. The read() is an observer and I can use it free without pay any fee.
