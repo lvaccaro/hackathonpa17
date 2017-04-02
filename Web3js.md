@@ -33,6 +33,9 @@ console.log("default account: "+web3.eth.defaultAccount);
 console.log("latest block: ");
 console.log(web3.eth.getBlock("latest"));
 ```
+*web3* allow you to connect directly to Ethereum node. You can select the node throught the HttpProvider() function.
+The coinbase account is the first address generated in the systsem with the initial coins; I call it the defaultAccount.
+I print also the information related the last block mined in the node. Each time you reset the etherum node, these values change.
 
 #### Accounts availables
 ```
@@ -43,6 +46,7 @@ accounts.forEach(function(account) {
     console.log(account+" -> "+balance(account));
 });
 ```
+Print a list of account generated in the system with the internal balance. The first account showed is the defaultAccount. When you start an etherum node from scretch, only the defaultAccount as balance greeter than 0.
 
 #### Parsing contract
 ```
