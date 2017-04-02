@@ -1,4 +1,4 @@
-# hackathonpa17
+# HackathonPA17
 SMART CONTRACT GUIDEBOOK - READY TO RUN IN < 24 HOURS
 
 How to write Smart Contract? how deploy? which environment? private testnet? 
