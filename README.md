@@ -19,7 +19,7 @@ We discuss the following environments:
 * Ethereum Azure: how to deploy an ethereum full distribution on Azure platform.
 
 ## Greetings
-Thanks to all the members of the #Banner group. We achieve the 3 position on #HackathonPA17.
+Thanks to all the members of the #Banner group, in particular Thomas Rossi. We achieve the 3 position on #HackathonPA17.
 A personal greetings to all the microsoft support to stable our scripts and run in the Azure environment.  
 https://twitter.com/SogeiUffStampa/status/847830084862038016  
 ![alt tag](https://pbs.twimg.com/media/C8QXZ_yXsAUuzLM.jpg:large)
