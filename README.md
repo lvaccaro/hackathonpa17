@@ -1,7 +1,6 @@
 # hackathonpa17
-SMART CONTRACT - READY TO RUN IN LESS THEN 24 HOURS
+SMART CONTRACT GUIDEBOOK - READY TO RUN IN LESS THEN 24 HOURS
 
-## Guidebook for Smart Contract 
 How to write Smart Contract? how deploy? which environment? private testnet? 
 Make Smart Contract in \<24h. HackathonPA17, Rome 2017.
 
