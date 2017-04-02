@@ -19,4 +19,4 @@ We discuss the following environments:
 * Ethereum Azure: how to deploy an ethereum full distribution on Azure platform.
 
 ## Conclusion
-My personal opinion on Smart Contract is more like a cool game tool.
+My personal opinion on Smart Contract is a cool game tool.
