@@ -20,3 +20,9 @@ We discuss the following environments:
 
 ## Conclusion
 My personal opinion on Smart Contract is a cool game tool.
+
+## Greetings
+Thanks to all the members of the #Banner group. We achieve the 3 position on #HackathonPA17.
+A personal greetings to all the microsoft support to stable our scripts and run in the Azure environment.  
+https://twitter.com/SogeiUffStampa/status/847830084862038016  
+![alt tag](https://pbs.twimg.com/media/C8QXZ_yXsAUuzLM.jpg:large)
