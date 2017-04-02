@@ -18,9 +18,6 @@ We discuss the following environments:
 * TestRPC: an ethereum peer node for test.
 * Ethereum Azure: how to deploy an ethereum full distribution on Azure platform.
 
-## Conclusion
-My personal opinion on Smart Contract is a cool game tool.
-
 ## Greetings
 Thanks to all the members of the #Banner group. We achieve the 3 position on #HackathonPA17.
 A personal greetings to all the microsoft support to stable our scripts and run in the Azure environment.  
