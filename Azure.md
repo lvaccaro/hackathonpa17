@@ -1,6 +1,7 @@
 # ETHEREUM NODE AZURE
 Follow the best template on github and click on the link "Deploy to Azure"
-https://github.com/Azure/azure-quickstart-templates
+
+https://github.com/Azure/azure-quickstart-templates/tree/master/ethereum-consortium-blockchain-network
 
 
 * Deploy a standard ethereum distribution
