@@ -18,11 +18,22 @@ We discuss the following environments:
 * TestRPC: an ethereum peer node for test.
 * Ethereum Azure: how to deploy an ethereum full distribution on Azure platform.
 
-## Greetings
+## Project BANNER
+Banner uses smart-contracts for competitive bid. We guarantee trasparency of the bids through a reputation mechanism.
+The workflow is described by 5 main steps:
+* publish the call for bids: setting the minimum money accepted, maximum number of partecipants and closing date.
+* take bids: any company can subscribe it and insert his own bid. 
+* voting system: the operators scrutinize the bids and they set, for each bid, 3 main scores by financial criteria, technical 	expertise and company reputation.
+* winner: at the closing date, the smart-contract extracts automatically the winner: the bids with the best scores.
+* reputation score: if the winner is honest and able to make the job (after a deep company and technical analisys by operators), increase his reputation score. If a winner is a liar (for example set a too low-cost bids), decrease the reputation score and the new winner is automatically the second classify.
+Note: only at the end of the call for bids, all the bids are public available.
+
+## Team
 We achieve the 3 position on #HackathonPA17.
 Thanks to all the members of the #Banner group:
 * Thomas Rossi https://github.com/ThomasRossi
-* Agid , Consip, EY, Microsof partner.
+* Gianluca Leuzzi gianluca.Leuzzi@microsoft.com
+* Agid , Consip, EY.
 
 A personal greetings to all the microsoft support to stable our scripts and run in the Azure environment.  
 https://twitter.com/SogeiUffStampa/status/847830084862038016  
