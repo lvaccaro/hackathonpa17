@@ -21,7 +21,7 @@ We discuss the following environments:
 ## Greetings
 We achieve the 3 position on #HackathonPA17.
 Thanks to all the members of the #Banner group:
-* Thomas Rossi
+* Thomas Rossi https://github.com/ThomasRossi
 * Agid , Consip, EY, Microsof partner.
 
 A personal greetings to all the microsoft support to stable our scripts and run in the Azure environment.  
